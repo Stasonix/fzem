@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="key, words" />
+<meta name="author" content="Bawyka Taras" />
+<link type="text/css" rel="stylesheet" href="public/css/style.css" media="all" />
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	var OneDay = 24*60*60*1000;
+
+	var start_date = new Date("Mon Jan 20 2014 00:00:00 GMT+0200 (Греция, Турция (зима))");
+	
+	var current_date = new Date();
+		
+	var diff_days = Math.round( Math.abs((current_date.getTime() - start_date.getTime())/OneDay));
+	
+	$('.never').text(diff_days);
+
+});
+</script>
+<title> No Zem' </title>
+<style>
+#off {
+	width: 100%;
+	height: 95%;
+}
+#off h1 {
+	line-height: 2;
+	
+	text-align:center;
+}
+
+#off p {
+	width: 100%;
+	line-height: 3;
+	text-align:center;
+	font-size: 4em;
+}
+</style>
+</head>
+<body>
+<div id="off">
+
+<h1>Days out</h1>
+
+<p class="never"></p>
+
+</div>
+<p style="text-align:center; font-size: 13px;">f.t.</p>
+</body>
+</html>
